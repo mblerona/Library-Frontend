@@ -10,16 +10,18 @@ import CountryDetailsPage from "./ui/pages/CountryDetailsPage";
 import LoginPage from "./ui/pages/LoginPage";
 import ProtectedRoute from "./ui/components/ProtectedRoute";
 import RegisterPage from "./ui/pages/RegisterPage";
+import CategoryStatisticsPage from "./ui/pages/CategoryStatisticsPage";
 function App() {
   return (
       <BrowserRouter>
         <Routes>
             <Route path="/" element={<Layout />}>
-                <Route index element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
+                <Route path="home" element={<HomePage />} />
+                {/*<Route index element={<ProtectedRoute><HomePage /></ProtectedRoute>} />*/}
                 <Route path="books" element={<ProtectedRoute><BooksPage /></ProtectedRoute>} />
                 <Route path="authors" element={<ProtectedRoute><AuthorsPage /></ProtectedRoute>} />
                 <Route path="countries" element={<ProtectedRoute><CountriesPage /></ProtectedRoute>} />
-
+                <Route path="categoryStatistics" element={<ProtectedRoute><CategoryStatisticsPage /></ProtectedRoute>} />
                 <Route path="books/:id" element={<ProtectedRoute><BookDetailsPage /></ProtectedRoute>} />
                 <Route path="authors/:id" element={<ProtectedRoute><AuthorDetailsPage /></ProtectedRoute>} />
                 <Route path="countries/:id" element={<ProtectedRoute><CountryDetailsPage /></ProtectedRoute>} />

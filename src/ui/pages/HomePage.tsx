@@ -5,7 +5,7 @@ const HomePage = () => {
     return (
         <Box>
             <Box sx={{ textAlign: "center", mb: 5 }}>
-                <Typography variant="h3" fontWeight="bold" gutterBottom>
+                <Typography variant="h3" sx={{ fontWeight: "bold" }}>
                     Library Rental App
                 </Typography>
 

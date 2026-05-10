@@ -24,9 +24,7 @@ const Header = () => {
                 {/* Navigation */}
                 {token && (
                     <Box sx={{ display: "flex", gap: 2 }}>
-                        <Button color="inherit" component={Link} to="/">
-                            Home
-                        </Button>
+
 
                         <Button color="inherit" component={Link} to="/books">
                             Books
@@ -38,6 +36,9 @@ const Header = () => {
 
                         <Button color="inherit" component={Link} to="/countries">
                             Countries
+                        </Button>
+                        <Button color="inherit" component={Link} to="/categoryStatistics">
+                            Statistics
                         </Button>
 
                         <Button
@@ -53,6 +54,9 @@ const Header = () => {
 
                 {!token && (
                     <Box sx={{ display: "flex", gap: 2 }}>
+                        <Button color="inherit" component={Link} to="/home">
+                            Home
+                        </Button>
                         <Button color="inherit" component={Link} to="/login">
                             Login
                         </Button>
@@ -60,6 +64,7 @@ const Header = () => {
                         <Button color="inherit" component={Link} to="/register">
                             Register
                         </Button>
+
                     </Box>
                 )}
             </Toolbar>
