@@ -8,3 +8,11 @@ export interface Book {
     authorId: number;
     countryName: string;
 }
+
+export interface BookFormData {
+    name: string;
+    category: string;
+    authorId: number;
+    state: string;
+    availableCopies: number;
+}
